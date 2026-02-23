@@ -138,3 +138,36 @@ display: inline-block;
     background-color: rgba(255,240,240,0.5);
     border-radius: 12px;
 }
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22px; /* chhota headline */
+    }
+
+    p {
+        font-size: 28px; /* chhota paragraph */
+    }
+
+    .cat {
+        width: 150px; /* cat image chhota */
+    }
+
+    .letter-window {
+        width: 95vw; /* screen ke almost full width */
+        padding-top: 120px; /* top space adjust */
+    }
+
+    .btn {
+        width: 90px; /* buttons chhote */
+    }
+
+    .buttons {
+        gap: 15px; /* button gap kam */
+        flex-wrap: wrap; /* agar chhota screen hai toh wrap ho jaye */
+    }
+
+    .final-text {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
