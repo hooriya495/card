@@ -20,12 +20,13 @@ envelope.addEventListener("click", () => {
         document.querySelector(".letter-window").classList.add("open");
     },50);
 });
+// Logic to move the NO btn (Mobile + Desktop Fix)
 
-// Logic to move the NO btn
+function moveNoButton(e) {
+    if (e) e.preventDefault(); // mobile freeze fix
 
-noBtn.addEventListener("mouseover", () => {
-    const min = 200;
-    const max = 200;
+    const min = 150;
+    const max = 250;
 
     const distance = Math.random() * (max - min) + min;
     const angle = Math.random() * Math.PI * 2;
@@ -35,7 +36,14 @@ noBtn.addEventListener("mouseover", () => {
 
     noBtn.style.transition = "transform 0.3s ease";
     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
-});
+}
+
+// Desktop hover
+noBtn.addEventListener("mouseenter", moveNoButton);
+
+// Mobile touch
+noBtn.addEventListener("touchstart", moveNoButton);
+
 
 // Logic to make YES btn to grow
 
